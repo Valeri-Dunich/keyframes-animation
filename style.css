@@ -1,0 +1,94 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background: linear-gradient(90deg, #aea4e3, #d3ffe8);
+    margin: 0;
+    overflow: hidden;
+}
+.title{
+    position: fixed;
+    top: 0;left: 0;
+    bottom: 0;right: 0;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 72px;
+    color: #fff;
+    opacity: .5;
+    z-index: 2;
+    text-shadow: 0 5px 80px rgba(0, 0, 0, .3);
+}
+.container {
+    width: 1400px;
+    padding: 30px 5px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    height: 100vh;
+    /* overflow: hidden; */
+    z-index: 1;
+}
+
+.block {
+    height: 200px;
+    width: 200px;
+    box-shadow: inset 0px 3px 10px rgba(0, 0, 0, .3);
+}
+
+.animation {
+    background-color: #00a2ff;
+    animation-name: Animation;
+    animation-duration: 10000ms;
+    animation-delay: 1000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Animation {
+
+    0% {
+        border-radius: 0px;
+        transform: rotate(0deg) scale(1) translateX(0);
+    }
+
+    10%,15% {
+        border-radius: 30px;
+        transform: rotate(360deg) scale(.5);
+        background-color:#ff00dd;
+    }
+   
+    25% {
+        border-radius: 50%;
+        transform: rotate(0deg) scale(1) translateX(1200px) translateY(0) skewX(0) scale(1);  
+        background-color:#3bd448;
+    }
+    35% {
+        border-radius: 5px;
+        transform: translateX(1200px) translateY(300px) skewX(20deg) scale(.8);
+        background-color:#ffa238;
+    }
+    40% {
+        border-radius: 5px;
+        transform: perspective(400px)translateX(1200px) translateY(300px) skewX(-20deg) scale(.8);
+        background-color:#ffa238;
+        opacity: 1;
+    }
+
+    50% {
+        border-radius: 5px;
+        transform:translateX(1200px) translateY(700px) skewX(0deg) scale(1) ;  
+        opacity: .2;
+        background-color:#fffc38;
+    }
+    75% {
+        border-radius:20px;
+        transform:perspective(500px) rotateY(0deg)translateX(0) translateY(700px) ; 
+        opacity:1; 
+        background-color:#fffc38;
+    }
+    100%{
+        border-radius:50%;
+        background-color:#ff3838;
+        transform:perspective(500px) rotateY(360deg)translateX(0) translateY(0)  ; 
+        
+        
+    }
+}
+
